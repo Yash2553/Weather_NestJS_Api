@@ -1,12 +1,16 @@
-import { IsNotEmpty } from "class-validator";
+import { ApiProperty } from '@nestjs/swagger';
+import { IsNotEmpty } from 'class-validator';
 
-export class CreateCityDTO{
+export class CreateCityDTO {
+    @ApiProperty({example:"Delhi", description: 'Name of the city' })
     @IsNotEmpty()
-    city: string
+    city: string;
 
+    @ApiProperty({ description: 'Latitude of the city' })
     @IsNotEmpty()
-    latitude: number
+    latitude: number;
 
+    @ApiProperty({ description: 'Longitude of the city' })
     @IsNotEmpty()
-    longitude: number
+    longitude: number;
 }
