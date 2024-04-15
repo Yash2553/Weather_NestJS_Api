@@ -1,6 +1,6 @@
 To get started with the Weather NestJS API, follow these steps:
 
-Step 1: After downloading all the required files, open your terminal or editor and navigate to the project directory. 
+Step 1: Clone all the required files, and open your terminal or editor and navigate to the project directory. 
 Run the command "npm install" to install all the necessary modules. 
 This will add all the required dependencies to your project.
 
