@@ -17,8 +17,6 @@ export class WeatherService {
     addCity(cityDTO: CreateCityDTO): Promise<City> {
         const model = new this.cityModel();
         model.city = cityDTO.city
-        // model.latitude = cityDTO.latitude;
-        // model.longitude = cityDTO.longitude
         return model.save();
     }
 
@@ -37,8 +35,6 @@ export class WeatherService {
 
         const requests = all_cities_docs.map(async (cityDoc) => {
             const city = cityDoc.city;
-            // const lat = cityDoc.latitude;
-            // const lon = cityDoc.longitude;
             const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
             const result = this.http.get(apiUrl).pipe(
                 map(response => {
