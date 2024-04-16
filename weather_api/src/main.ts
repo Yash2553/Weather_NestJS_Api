@@ -19,7 +19,6 @@ import * as basicAuth from 'express-basic-auth';
     .setTitle('Weather')
     .setDescription('Fetch weather for configured cities using Open Weather API.')
     .setVersion('1.0')
-    .addTag('weather')
     .addBasicAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
