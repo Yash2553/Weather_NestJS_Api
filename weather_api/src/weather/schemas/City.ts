@@ -7,12 +7,7 @@ export type CityDocument = City & Document
 export class City{
     @Prop({unique: true})
     city: string;
-    
-    @Prop()
-    latitude: number;
 
-    @Prop()
-    longitude: number;
-}
+ }
 
 export const CitySchema = SchemaFactory.createForClass(City);
