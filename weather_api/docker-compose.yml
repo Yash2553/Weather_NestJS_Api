@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  mongo_db:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    # volumes:
+    #   - mongo_db:/data/db
+
+  api:
+    build: .
+    ports:
+      - 3002:3002
+  
+    environment:
+      PORT: 3002
+      MONGO_URI: mongodb://mongo_db:27017/Weather-data
+      API_KEY: d05a0777d9006e1940d6ab7b91363d07
+      DB_NAME: Weather-data
+    
+    depends_on:
+      - mongo_db
+
+
+
+
+
+
